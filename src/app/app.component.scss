@@ -1,0 +1,16 @@
+@import './_variable';
+
+$sfondoHeader: $secondaryColor;
+$sfondoFooter: $secondaryColor;
+
+header{
+    background: $sfondoHeader;
+}
+footer{
+    background: $sfondoFooter;
+}
+main{
+    flex-grow: 1;
+}
+
+

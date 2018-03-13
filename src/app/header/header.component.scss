@@ -1,0 +1,11 @@
+@import '../_variable';
+
+li{
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
