@@ -8,7 +8,7 @@
 
   <tbody>
     <tr *ngFor = "let utente of utenti">
-      <td><img src="{{utente.picture.medium}}"></td>
+      <td><img src="{{utente.picture.medium}}" alt="utonto"></td>
       <td class="testo">{{utente.name.first}}</td>
       <td class="testo">{{utente.name.last}}</td>
       <td class="bottone"><button (click)="visualizzaDettaglioUtente(utente)" >{{etichette.dettagli}}</button></td>
