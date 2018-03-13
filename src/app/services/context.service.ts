@@ -55,7 +55,11 @@ export class ContextService {
       'Telephone',
       'Adresse e-mail',
       'Détails',
-      'Arrière'
+      'Arrière',
+      'Choisis une langue',
+      'Italien',
+      'Français',
+      'Anglais'
     );
 
     this.etichetteInglesi = new EtichettaLingua(
@@ -67,7 +71,11 @@ export class ContextService {
       'Phone',
       'E-Mail',
       'Details',
-      'Back'
+      'Back',
+      'Choose a language',
+      'Italian',
+      'French',
+      'English'
     );
 
     this.etichetteItaliane = new EtichettaLingua(
@@ -79,7 +87,11 @@ export class ContextService {
       'Telefono',
       'Posta elettronica',
       'Dettagli',
-      'Ritorna'
+      'Ritorna',
+      'Scegli una lingua',
+      'Italiano',
+      'Francese',
+      'Inglese'
     );
   }
 
@@ -114,6 +126,10 @@ export class ContextService {
 
   getLanguage(): string {
     return this.language;
+  }
+
+  setLanguage(lang: string): void {
+    this.language = lang;
   }
 
   getElementiFooter(): Observable<ElementoFooter[]> {

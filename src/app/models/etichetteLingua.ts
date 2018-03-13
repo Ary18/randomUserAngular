@@ -1,4 +1,8 @@
 export class EtichettaLingua {
+    public scegliUnaLingua: string;
+    public italiano: string;
+    public inglese: string;
+    public francese: string;
     public nome: string;
     public cognome: string;
     public dataNascita: string;
@@ -17,7 +21,11 @@ export class EtichettaLingua {
                 _telefono: string,
                 _email: string,
                 _dettagli: string,
-                _ritornaAllaTabella: string) {
+                _ritornaAllaTabella: string,
+                _scegliUnaLingua: string,
+                _italiano: string,
+                _francese: string,
+                _inglese: string) {
         this.nome = _nome;
         this.cognome = _cognome;
         this.dataNascita = _dataNascita;
@@ -27,5 +35,9 @@ export class EtichettaLingua {
         this.email = _email;
         this.dettagli = _dettagli;
         this.ritornoAllaTabella = _ritornaAllaTabella;
+        this.scegliUnaLingua = _scegliUnaLingua;
+        this.italiano = _italiano;
+        this.inglese = _inglese;
+        this.francese = _francese;
     }
 }

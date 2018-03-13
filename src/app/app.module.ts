@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { ErrorPageComponent } from './errorpage/errorpage.component';
 import { ImpostazioniComponent } from './impostazioni/impostazioni.component';
 import { UtentiService } from './services/utenti.service';
 import { DettaglioUtenteComponent } from './dettaglio-utente/dettaglio-utente.component';
+import { SceltaLinguaService } from './services/scelta-lingua.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { DettaglioUtenteComponent } from './dettaglio-utente/dettaglio-utente.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [ContextService, UtentiService],
+  providers: [ContextService, UtentiService, SceltaLinguaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
