@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UtentiService } from '../services/utenti.service';
 import { RandomUserMe, Result } from '../models/user';
+import { ContextService } from '../services/context.service';
+import { EtichettaLingua } from '../models/etichetteLingua';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,8 @@ export class HomeComponent implements OnInit {
   mostraTabella: boolean;
   utenti: Result[];
   utenteSelezionato: Result;
-  constructor(private servizioUtenti: UtentiService) {
+  etichette: EtichettaLingua;
+  constructor(private servizioUtenti: UtentiService, private context: ContextService) {
     this.mostraTabella = true;
    }
 
@@ -19,6 +22,7 @@ export class HomeComponent implements OnInit {
     this.servizioUtenti.getRandomMeUser(20).subscribe( utenti => {
       this.utenti = utenti.results;
     });
+    this.etichette = this.context.getEtichetteLingua(this.context.getLanguage());
   }
 
   visualizzaDettaglioUtente(utente: Result) {

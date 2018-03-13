@@ -3,6 +3,7 @@ import { ElementoNav } from '../models/elementoNav';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { ElementoFooter } from '../models/elementoFooter';
+import { EtichettaLingua } from '../models/etichetteLingua';
 
 @Injectable()
 export class ContextService {
@@ -13,6 +14,9 @@ export class ContextService {
   private vociMenuInglese: ElementoNav[] = [];
   private vociMenuFrancese: ElementoNav[] = [];
   private elementiFooter: ElementoFooter[] = [];
+  private etichetteFrancesi: EtichettaLingua;
+  private etichetteInglesi: EtichettaLingua;
+  private etichetteItaliane: EtichettaLingua;
   constructor() {
     this.vociMenuItaliano = [
       {nome: 'Principale', indirizzo: '/home', ordine: 1},
@@ -41,6 +45,42 @@ export class ContextService {
       {href: 'https://pinterest.com/wired', class: 'marginFooter fab fa-google-plus fa-2x'},
       {href: 'http://www.dsgroup.it', class: 'marginFooter fa fa-envelope-square fa-2x'}
     ];
+
+    this.etichetteFrancesi = new EtichettaLingua(
+      'Nom',
+      'Prenom',
+      'Date de naissance',
+      'Adresse',
+      'Photo',
+      'Telephone',
+      'Adresse e-mail',
+      'Détails',
+      'Arrière'
+    );
+
+    this.etichetteInglesi = new EtichettaLingua(
+      'Name',
+      'Surname',
+      'Date of birth',
+      'Address',
+      'Photo',
+      'Phone',
+      'E-Mail',
+      'Details',
+      'Back'
+    );
+
+    this.etichetteItaliane = new EtichettaLingua(
+      'Nome',
+      'Cognome',
+      'Data di nascita',
+      'Indirizzo',
+      'Foto',
+      'Telefono',
+      'Posta elettronica',
+      'Dettagli',
+      'Ritorna'
+    );
   }
 
   getTitle(): string {
@@ -82,5 +122,18 @@ export class ContextService {
 
   getUrlRandomUser(): string {
     return this.urlRandomUser;
+  }
+
+  getEtichetteLingua(lang: string): EtichettaLingua {
+    switch (lang) {
+      case 'it':
+          return this.etichetteItaliane;
+        case 'en':
+          return this.etichetteInglesi;
+        case 'fr':
+          return this.etichetteFrancesi;
+        default:
+          return this.etichetteInglesi;
+    }
   }
 }

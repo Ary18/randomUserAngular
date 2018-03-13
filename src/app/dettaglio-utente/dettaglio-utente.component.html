@@ -3,29 +3,29 @@
     <img src="{{utente.picture.large}}">
   </article>
   <article>
-    <label>Nome:</label>
+    <label>{{etichette.nome}}</label>
     <div>{{utente.name.first}}</div>
   </article>
   <article>
-    <label>Cognome:</label>
+    <label>{{etichette.cognome}}</label>
     <div>{{utente.name.last}}</div>
   </article>
   <article>
-    <label>Data di Nascita:</label>
+    <label>{{etichette.dataNascita}}</label>
     <div>{{utente.dob}}</div>
   </article>
   <article>
-    <label>Indirizzo:</label>
+    <label>{{etichette.indirizzo}}</label>
     <div>{{indirizzoCompleto}}</div>
   </article>
   <article>
-    <label>Telefono:</label>
+    <label>{{etichette.telefono}}</label>
     <div>{{utente.phone}}</div>
   </article>
   <article>
-    <label>E-Mail:</label>
+    <label>{{etichette.email}}</label>
     <div>{{utente.email}}</div>
   </article>
 
-  <button (click)="ritornaAllaTabella()">Ritorna alla tabella</button>
+  <button (click)="ritornaAllaTabella()">{{etichette.ritornoAllaTabella}}</button>
 </section>

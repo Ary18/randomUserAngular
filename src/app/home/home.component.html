@@ -1,8 +1,8 @@
 <table *ngIf= "utenti && mostraTabella">
   <thead>
-    <th>Foto</th>
-    <th>Nome</th>
-    <th>Cognome</th>
+    <th>{{etichette.foto}}</th>
+    <th>{{etichette.nome}}</th>
+    <th>{{etichette.cognome}}</th>
     <th></th>
   </thead>
 
@@ -11,7 +11,7 @@
       <td><img src="{{utente.picture.medium}}"></td>
       <td class="testo">{{utente.name.first}}</td>
       <td class="testo">{{utente.name.last}}</td>
-      <td class="bottone"><button (click)="visualizzaDettaglioUtente(utente)" >Dettagli</button></td>
+      <td class="bottone"><button (click)="visualizzaDettaglioUtente(utente)" >{{etichette.dettagli}}</button></td>
     </tr>
   </tbody>
 
