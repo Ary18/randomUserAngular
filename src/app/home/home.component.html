@@ -16,4 +16,4 @@
   </tbody>
 
 </table>
-<app-dettaglio-utente *ngIf="!mostraTabella && utenteSelezionato" [utente]="utenteSelezionato" (open)="tornaAVisualizzareTabella($event)"></app-dettaglio-utente>
+<app-dettaglio-utente *ngIf="!mostraTabella && (utenteSelezionato !== undefined)" [utente]="utenteSelezionato" (open)="tornaAVisualizzareTabella($event)"></app-dettaglio-utente>
