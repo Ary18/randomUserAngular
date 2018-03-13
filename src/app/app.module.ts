@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
 import { ErrorPageComponent } from './errorpage/errorpage.component';
 import { ImpostazioniComponent } from './impostazioni/impostazioni.component';
+import { UtentiService } from './services/utenti.service';
 
 @NgModule({
   declarations: [
@@ -25,9 +27,10 @@ import { ImpostazioniComponent } from './impostazioni/impostazioni.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [ContextService],
+  providers: [ContextService, UtentiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,7 @@ import { ElementoFooter } from '../models/elementoFooter';
 
 @Injectable()
 export class ContextService {
+  private urlRandomUser = 'https://randomuser.me/api';
   private titolo = 'RANDOMUSER';
   private language = 'fr';
   private vociMenuItaliano: ElementoNav[] = [];
@@ -77,5 +78,9 @@ export class ContextService {
 
   getElementiFooter(): Observable<ElementoFooter[]> {
     return of(this.elementiFooter);
+  }
+
+  getUrlRandomUser(): string {
+    return this.urlRandomUser;
   }
 }
