@@ -1,3 +1,6 @@
-<p>
-  footer works!
-</p>
+<footer>
+    <a *ngFor="let voce of vociFooter" href="{{voce.href}}">
+      <i class="{{voce.class}}"></i>
+    </a>
+  </footer>
+

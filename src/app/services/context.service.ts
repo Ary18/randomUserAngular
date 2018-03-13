@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ElementoNav } from '../models/elementoNav';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { ElementoFooter } from '../models/elementoFooter';
 
 @Injectable()
 export class ContextService {
@@ -10,6 +11,7 @@ export class ContextService {
   private vociMenuItaliano: ElementoNav[] = [];
   private vociMenuInglese: ElementoNav[] = [];
   private vociMenuFrancese: ElementoNav[] = [];
+  private elementiFooter: ElementoFooter[] = [];
   constructor() {
     this.vociMenuItaliano = [
       {nome: 'Principale', indirizzo: '/home', ordine: 1},
@@ -30,6 +32,13 @@ export class ContextService {
       {nome: 'Galerie', indirizzo: '/gallery', ordine: 2},
       {nome: 'Contactez noez', indirizzo: '/contact', ordine: 3},
       {nome: 'Paramétres', indirizzo: '/impostazioni', ordine: 4}
+    ];
+
+    this.elementiFooter = [
+      {href: 'https://www.facebook.com/wired', class: 'marginFooter fab fa-facebook-f fa-2x'},
+      {href: 'http://www.twitter.com/wired', class: 'marginFooter fab fa-twitter fa-2x'},
+      {href: 'https://pinterest.com/wired', class: 'marginFooter fab fa-google-plus fa-2x'},
+      {href: 'http://www.dsgroup.it', class: 'marginFooter fa fa-envelope-square fa-2x'}
     ];
   }
 
@@ -64,5 +73,9 @@ export class ContextService {
 
   getLanguage(): string {
     return this.language;
+  }
+
+  getElementiFooter(): Observable<ElementoFooter[]> {
+    return of(this.elementiFooter);
   }
 }

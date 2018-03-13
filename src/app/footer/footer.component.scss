@@ -1,0 +1,38 @@
+$colorBack: #F7EBD4;
+$colorHover: red;
+$colorLink: rgb(36, 33, 33);
+$colorLinkFooter: purple;
+$colorShadow: #333333;
+$colorHeaderFooter: white;
+$colorTextHeaderFooter: white;
+$colorTextHeader: wheat;
+$colorBorderNav: grey;
+$colorBorderForm: grey;
+$colorTextNav: rgb(36, 33, 33);
+$colorText: rgb(36, 33, 33);
+$colorBorderBottom: black;
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: $colorHeaderFooter;
+    padding: 20px;
+    color: $colorTextHeaderFooter;
+}
+
+.marginFooter {
+    margin: 2rem;
+}
+a {transition: all 0.5s ease}
+a:link, a:visited {
+    color: $colorLink;
+    text-decoration: none}
+footer a:link, footer a:visited {
+    color: $colorLinkFooter;
+    text-decoration: none}
+a:hover, footer a:hover {
+    color: $colorHover;
+    text-decoration: none}
