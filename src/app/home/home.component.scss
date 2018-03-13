@@ -1,0 +1,26 @@
+table{
+    background: whitesmoke;
+    width: 100%;
+}
+
+img{
+    display: flex;
+    margin: auto;
+}
+
+
+.testo{
+text-transform: capitalize;
+text-align: left;
+}
+
+.bottone{
+    display: flex;
+    justify-content: flex-end;
+}
+
+button{
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 10px;
+}

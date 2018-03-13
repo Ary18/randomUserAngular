@@ -1,3 +1,18 @@
-<p>
-  home works!
-</p>
+<table *ngIf= "utenti">
+  <thead>
+    <th>Foto</th>
+    <th>Nome</th>
+    <th>Cognome</th>
+    <th></th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor = "let utente of utenti">
+      <td><img src="{{utente.picture.medium}}"></td>
+      <td class="testo">{{utente.name.first}}</td>
+      <td class="testo">{{utente.name.last}}</td>
+      <td class="bottone"><button>Dettagli</button></td>
+    </tr>
+  </tbody>
+
+</table>

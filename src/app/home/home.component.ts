@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UtentiService } from '../services/utenti.service';
+import { RandomUserMe, Result } from '../models/user';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  utenti: Result[];
+  constructor(private servizioUtenti: UtentiService) { }
 
   ngOnInit() {
+    this.servizioUtenti.getRandomMeUser(20).subscribe( utenti => {
+      this.utenti = utenti.results;
+    });
   }
 
 }
