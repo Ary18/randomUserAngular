@@ -1,0 +1,31 @@
+<section>
+  <article>
+    <img src="{{utente.picture.large}}">
+  </article>
+  <article>
+    <label>Nome:</label>
+    <div>{{utente.name.first}}</div>
+  </article>
+  <article>
+    <label>Cognome:</label>
+    <div>{{utente.name.last}}</div>
+  </article>
+  <article>
+    <label>Data di Nascita:</label>
+    <div>{{utente.dob}}</div>
+  </article>
+  <article>
+    <label>Indirizzo:</label>
+    <div>{{indirizzoCompleto}}</div>
+  </article>
+  <article>
+    <label>Telefono:</label>
+    <div>{{utente.phone}}</div>
+  </article>
+  <article>
+    <label>E-Mail:</label>
+    <div>{{utente.email}}</div>
+  </article>
+
+  <button (click)="ritornaAllaTabella()">Ritorna alla tabella</button>
+</section>

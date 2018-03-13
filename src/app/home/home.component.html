@@ -1,4 +1,4 @@
-<table *ngIf= "utenti">
+<table *ngIf= "utenti && mostraTabella">
   <thead>
     <th>Foto</th>
     <th>Nome</th>
@@ -11,8 +11,9 @@
       <td><img src="{{utente.picture.medium}}"></td>
       <td class="testo">{{utente.name.first}}</td>
       <td class="testo">{{utente.name.last}}</td>
-      <td class="bottone"><button>Dettagli</button></td>
+      <td class="bottone"><button (click)="visualizzaDettaglioUtente(utente)" >Dettagli</button></td>
     </tr>
   </tbody>
 
 </table>
+<app-dettaglio-utente *ngIf="!mostraTabella && utenteSelezionato" [utente]="utenteSelezionato" (open)="tornaAVisualizzareTabella($event)"></app-dettaglio-utente>

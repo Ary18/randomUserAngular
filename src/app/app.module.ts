@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ErrorPageComponent } from './errorpage/errorpage.component';
 import { ImpostazioniComponent } from './impostazioni/impostazioni.component';
 import { UtentiService } from './services/utenti.service';
+import { DettaglioUtenteComponent } from './dettaglio-utente/dettaglio-utente.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UtentiService } from './services/utenti.service';
     GalleryComponent,
     ContactComponent,
     ErrorPageComponent,
-    ImpostazioniComponent
+    ImpostazioniComponent,
+    DettaglioUtenteComponent
   ],
   imports: [
     BrowserModule,

@@ -8,13 +8,26 @@ import { RandomUserMe, Result } from '../models/user';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  mostraTabella: boolean;
   utenti: Result[];
-  constructor(private servizioUtenti: UtentiService) { }
+  utenteSelezionato: Result;
+  constructor(private servizioUtenti: UtentiService) {
+    this.mostraTabella = true;
+   }
 
   ngOnInit() {
     this.servizioUtenti.getRandomMeUser(20).subscribe( utenti => {
       this.utenti = utenti.results;
     });
+  }
+
+  visualizzaDettaglioUtente(utente: Result) {
+    this.mostraTabella = false;
+    this.utenteSelezionato = utente;
+  }
+
+  tornaAVisualizzareTabella(argomento: string): void {
+    this.mostraTabella = true;
   }
 
 }

@@ -1,0 +1,40 @@
+@import "./../_variable";
+
+section{
+    background: $colorBack;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100%;
+
+    article{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        align-self: center;
+        border-bottom: thin solid #333;
+
+        div{
+            flex-grow: 1;
+            text-align: right;
+            margin: 10px;
+        }
+
+        label{
+            flex-grow: 1;
+            margin: 10px;
+        }
+
+        img{
+            margin: 20px auto;
+        }
+    }
+
+    button{
+        font-size: 2rem;
+        border-radius: 10px;
+        margin: 20px 10px;
+        width: 20%;
+        align-self: center;
+    }
+}
