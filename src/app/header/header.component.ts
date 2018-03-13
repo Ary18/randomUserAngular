@@ -11,9 +11,7 @@ export class HeaderComponent implements OnInit {
   vociMenu: ElementoNav[] = [];
   constructor(private context: ContextService) { }
   ngOnInit() {
-    this.vociMenu = this.context.getMenu().sort((a, b) => {
-      return a.ordine - b.ordine;
-    });
+    this.context.getMenu(this.context.getLanguage()).subscribe(vociMenu => {this.vociMenu = vociMenu; });
     console.log(this.vociMenu);
   }
 }

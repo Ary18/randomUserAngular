@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
 import { ErrorPageComponent } from './errorpage/errorpage.component';
+import { ImpostazioniComponent } from './impostazioni/impostazioni.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ErrorPageComponent } from './errorpage/errorpage.component';
     HomeComponent,
     GalleryComponent,
     ContactComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ImpostazioniComponent
   ],
   imports: [
     BrowserModule,
